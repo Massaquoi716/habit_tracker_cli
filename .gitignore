@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+venv/
+*.env
+.idea/  # For PyCharm or IntelliJ IDEA users
+.vscode/ # For VS Code users
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
+
+# Data files (typically not version controlled in dev)
+data/*.json
