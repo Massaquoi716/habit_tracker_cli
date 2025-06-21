@@ -4,7 +4,7 @@ A Python command-line application for tracking daily and weekly habits, built wi
 
 Here's a comprehensive `README.md` file for your Habit Tracker CLI Application, incorporating all the details you've provided.
 
-````markdown
+
 # Habit Tracker CLI Application
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
@@ -51,29 +51,29 @@ Refer to [`docs/concept_document.md`](./docs/concept_document.md) for the detail
 ## Setup
 
 1.  **Clone this repository:**
-    ```
+    
     git clone [https://github.com/Massaquoi716/habit_tracker_cli](https://github.com/Massaquoi716/habit_tracker_cli)
-    ```
+    
 2.  **Navigate into the directory:**
-    ```
+    
     cd habit_tracker_cli
-    ```
+    
 3.  **Create and activate a virtual environment:**
-    ```
+    
     python -m venv venv
     source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
-    ```
+    
 4.  **Install dependencies:**
-    ```
+    
     pip install -r requirements.txt
-    ```
+    
 
 ## How to Run
 
 1.  **Run the application:**
-    ```
+    
     python3 src/main.py
-    ```
+    
     Use the interactive menu to:
     * Add a new habit (daily or weekly, with optional weekday for weekly habits).
     * Check off a habit (with notes and mood score).
@@ -82,21 +82,21 @@ Refer to [`docs/concept_document.md`](./docs/concept_document.md) for the detail
     * Exit the application.
 
 2.  **Generate predefined habits (3 daily, 2 weekly) with 4 weeks of data:**
-    ```
+    
     python3 scripts/generate_fixtures.py
-    ```
+    
 
 ## How to Test
 
 Run the test suite (currently **65 tests**):
 
-```
+
 pytest -v
-````
+
 
 ## Project Structure
 
-```
+
 habit_tracker_cli/
 ├── src/                      # Source code
 │   ├── data_model/           # Defines core entities: Habit, Completion
@@ -120,7 +120,7 @@ habit_tracker_cli/
 │   └── concept_document.md   # High-level design document
 ├── requirements.txt          # Python dependencies
 └── venv/                     # Python virtual environment (not tracked by Git)
-```
+
 
 ## Predefined Habits
 
