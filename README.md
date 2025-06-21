@@ -5,9 +5,6 @@
 
 A Python command-line application for tracking daily and weekly habits, built with object-oriented and functional programming principles.
 
-Here's a comprehensive `README.md` file for your Habit Tracker CLI Application, incorporating all the details you've provided.
-
-
 ## Table of Contents
 
 * [Conception Phase](#conception-phase)
