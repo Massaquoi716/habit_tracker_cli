@@ -1,29 +1,56 @@
 import datetime
-
-
+from typing import Optional
+import uuid
 
 class Completion:
-     
-    """
-    Represents a single instance of a habit being completed.
-
-    Attributes:
-        completed_at (datetime.datetime): The date and time the habit was completed. Defaults to the current time.
-        notes (str, optional): Additional context or comments about the completion event.
-        mood_rating (int, optional): A subjective rating (e.g., 1–5) of the user's mood at the time of completion.
-
-    Example:
-        >>> completion = Completion(notes="Felt great!", mood_rating=5)
-        >>> print(completion.completed_at)
-        2025-06-17 10:30:00
-
-    Why use this class:
-        - Allows extensibility beyond just storing a datetime.
-        - Supports additional metadata like mood, location, or duration.
-        - Demonstrates good OOP practice via composition.
-    """
-    def __init__(self, completed_at=None, notes=None, mood_rating=None):
-        self.completed_at = completed_at if completed_at else datetime.datetime.now()
+    """Represents a single completion event for a habit."""
+    
+    def __init__(
+        self,
+        timestamp: Optional[datetime.datetime] = None,
+        notes: Optional[str] = None,
+        mood_score: Optional[int] = None,
+        _id: Optional[str] = None
+    ):
+        self.timestamp = timestamp or datetime.datetime.now()
         self.notes = notes
-        self.mood_rating = mood_rating
+        self.mood_score = mood_score
+        self.id = _id or str(uuid.uuid4())
 
+        if self.mood_score is not None and not (1 <= self.mood_score <= 5):
+            raise ValueError("Mood score must be between 1 and 5.")
+
+    def to_dict(self) -> dict:
+        """Converts the Completion object to a dictionary for JSON serialization."""
+        return {
+            "id": self.id,
+            "timestamp": self.timestamp.isoformat(),
+            "notes": self.notes,
+            "mood_score": self.mood_score
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Completion":
+        """Creates a Completion object from a dictionary."""
+        return cls(
+            _id=data.get("id"),
+            timestamp=datetime.datetime.fromisoformat(data["timestamp"]),
+            notes=data.get("notes"),
+            mood_score=data.get("mood_score")
+        )
+
+    def __str__(self) -> str:
+        mood_str = f" Mood: {self.mood_score}/5" if self.mood_score else ""
+        notes_str = f" Notes: '{self.notes}'" if self.notes else ""
+        return f"Completed at {self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}{notes_str}{mood_str}"
+
+    def __repr__(self) -> str:
+        return (
+            f"Completion(timestamp='{self.timestamp.isoformat()}', "
+            f"notes='{self.notes}', mood_score={self.mood_score}, _id='{self.id}')"
+        )
+
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, Completion):
+            return NotImplemented
+        return self.id == other.id
