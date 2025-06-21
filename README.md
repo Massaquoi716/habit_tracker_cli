@@ -1,16 +1,12 @@
 # Habit Tracker CLI Application
 
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+
+
 A Python command-line application for tracking daily and weekly habits, built with object-oriented and functional programming principles.
 
 Here's a comprehensive `README.md` file for your Habit Tracker CLI Application, incorporating all the details you've provided.
 
-
-# Habit Tracker CLI Application
-
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-3100/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-A Python command-line application for tracking daily and weekly habits, built with object-oriented and functional programming principles. This project fulfills the requirements of the IU course "Object Oriented and Functional Programming with Python (DLBDSOOFPP01)".
 
 ## Table of Contents
 
@@ -41,12 +37,23 @@ Refer to [`docs/concept_document.md`](./docs/concept_document.md) for the detail
 
 ## Requirements
 
-* Python 3.10 or later
-* Dependencies (listed in `requirements.txt`):
-    * `freezegun==1.5.1`
-    * `questionary==2.0.1`
-    * `pytest==8.4.0`
-    * `pytest-mock==3.14.1`
+- Python 3.10 or later
+- Dependencies:
+  - exceptiongroup==1.3.0
+  - freezegun==1.5.2
+  - iniconfig==2.1.0
+  - packaging==25.0
+  - pluggy==1.6.0
+  - prompt_toolkit==3.0.51
+  - Pygments==2.19.1
+  - pytest==8.4.0
+  - pytest-mock==3.14.1
+  - python-dateutil==2.9.0.post0
+  - questionary==2.1.0
+  - six==1.17.0
+  - tomli==2.2.1
+  - typing_extensions==4.14.0
+  - wcwidth==0.2.13
 
 ## Setup
 
@@ -96,7 +103,7 @@ pytest -v
 
 ## Project Structure
 
-
+```
 habit_tracker_cli/
 ├── src/                      # Source code
 │   ├── data_model/           # Defines core entities: Habit, Completion
@@ -120,7 +127,7 @@ habit_tracker_cli/
 │   └── concept_document.md   # High-level design document
 ├── requirements.txt          # Python dependencies
 └── venv/                     # Python virtual environment (not tracked by Git)
-
+```
 
 ## Predefined Habits
 
