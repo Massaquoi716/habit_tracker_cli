@@ -63,9 +63,17 @@ Refer to [`docs/concept_document.md`](./docs/concept_document.md) for the detail
     cd habit_tracker_cli
     
 3.  **Create and activate a virtual environment:**
+    - Create environment (all platforms):
+        - python -m venv venv
+    - Activate the environment:
+        - On macOS/Linux:
+            - source venv/bin/activate
+        - On Windows (PowerShell):
+            - .\venv\Scripts\Activate.ps1
+        - On Windows (Command Prompt):
+            - .\venv\Scripts\activate.bat
     
-    python -m venv venv
-    source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
+    
     
 4.  **Install dependencies:**
     
