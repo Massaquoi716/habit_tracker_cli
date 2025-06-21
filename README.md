@@ -84,7 +84,7 @@ Refer to [`docs/concept_document.md`](./docs/concept_document.md) for the detail
 
 1.  **Run the application:**
     
-    python3 src/main.py
+    python -m src.main
     
     Use the interactive menu to:
     * Add a new habit (daily or weekly, with optional weekday for weekly habits).
