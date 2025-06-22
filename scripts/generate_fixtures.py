@@ -47,7 +47,7 @@ def main():
         with open(out_path, "r", encoding="utf-8") as f:
             fixtures = json.load(f)
 
-    # 2) Append your new weekly habit
+    # 2) Append new weekly habit
     fixtures.append({
         "id": str(uuid.uuid4()),
         "name": "Deep Work",
