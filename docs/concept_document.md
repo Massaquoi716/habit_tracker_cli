@@ -57,6 +57,10 @@ UserInterface
 ## 3. Designing the Habit Data Model (OOP)
 
 The core data structure uses OOP to model and manage habits.
+Below is a detailed UML Class Diagram illustrating the core components of the Habit Tracker application, their attributes, methods, and relationships, providing a comprehensive overview of the object-oriented design.
+
+![Detailed Class Diagram of Habit Tracker CLI](habit_tracker_class_diagram.png)
+
 
 ### 3.1 `BaseHabit` (`src/data_model/habit.py`)
 
