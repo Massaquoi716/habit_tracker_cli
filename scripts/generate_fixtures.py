@@ -173,3 +173,6 @@ def main():
         json.dump(fixtures, f, indent=4)
 
     print(f"Generated {len(fixtures)} habits in {out_path.resolve()}")
+
+if __name__ == "__main__":
+    main()
